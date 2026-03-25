@@ -27,6 +27,71 @@
         </header>
 
         <main>
+            <form action="#" method="post">
+                <fieldset style="border: 2px solid navy; padding: 15px; font-family: sans-serif;">
+                    <legend style="color: navy; font-weight: bold; padding: 0 5px;">Contact Me</legend>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="fname">Full Name: </label>
+                        <input id="fname" name="fname" type="text" style="border: 1px solid navy; padding: 4px;" placeholder="Your full name" required maxlength="60">
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="u_email">Email: </label>
+                        <input id="u_email" name="u_email" type="email" placeholder="example@utm.my" required>
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                            <label for="u_phone">Phone: </label>
+                        <input id="u_phone" name="u_phone" type="tel" placeholder="01X-XXXXXXX">
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="stats">Current Study: </label>
+                        <select name="stats" id="stats" required>
+                            <optgroup label="Undergrad">
+                                <option value="diploma">Diploma</option>
+                                <option value="degree">Degree</option>
+                            </optgroup> 
+                            <optgroup label="Postgrad">
+                                <option value="masters">Masters</option>
+                                <option value="phd">PhD</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 10px;">
+                        <label for="age">Age: </label>
+                        <input id="age" name="age" type="number" min="17" max="99" style="width: 50px;">
+                    </div>
+                    <div>
+                        <label for="bday" style="margin-bottom: 10px;">Available Date: </label>
+                        <input id="bday" name="bday" type="date">
+                    </div>
+
+                    <div>
+                        <label for="priority">Priority</label>
+                        <input id="priority" type="range" min="1" max="10">
+                    </div>
+
+                    <p><strong>Preferred Contact method: </strong> </p>
+                    <input type="radio" value="u-email" name="contact_method" value="email">Email<label for="u_email">Email</label>
+                    <input type="radio" value="u_phone" name="contact_method" value="phone">Phone<label for="u_phone">Phone</label>
+                    <input type="radio" value="u_wsp" name="contact_method" value="Whatsapp">Whatsapp<label for="u_wsp">Whatsapp</label>
+
+
+                    <div style="margin-top: 15px;">
+                        <label for="msg">Message:</label><br>
+                        <textarea id="msg" name="msg" rows="4" cols="40" style="background-color: #f0f0f0; border: 1px solid gray;"></textarea>
+                    </div>
+
+                    <div style="margin-top: 10px;">
+                        <button type="submit">Send Message</button>
+                    </div>
+
+                    <!-- Fulfiled all of task 6 to build a Contact me section of the website -->
+                </fieldset>
+            </form>
         </main>
 
         <footer>
