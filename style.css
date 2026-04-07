@@ -9,7 +9,7 @@
 
 /* TASK 1: ARCHITECTURE & CUSTOM PROPERTIES */
 html {
-    font-size: 62.5%; /* 1rem = 10px [cite: 32, 63] */
+    font-size: 62.5%; /* 1rem = 10px  */
 }
 
 * {
@@ -49,12 +49,13 @@ body {
     line-height: 1.8;
     color: var(--color-text);
     background-color: var(--color-primary); 
+    padding: 3.0rem;
 }
 
 h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--color-accent); 
-    margin-bottom: var(--space-md); 
+    margin-top: var(--space-md); 
 }
 
 header {
@@ -115,6 +116,14 @@ nav {
     border: 2px solid #58a6ff; 
 }
 
+.foot {
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 /* TASK 4: PAGE LAYOUT (GRID) */
 .layout-container {
     display: grid;
@@ -133,7 +142,7 @@ nav {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* [cite: 76] */
 }
 
-/* TASK 5: RESPONSIVE DESIGN [cite: 142] */
+/* TASK 5: RESPONSIVE DESIGN  */
 @media (min-width: 1024px) {
     .layout-container {
         grid-template-columns: 1fr 300px; /* Sidebar layout [cite: 120, 151] */

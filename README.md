@@ -11,4 +11,3 @@ I accidentally did the styled version of the website first then only did I strip
 main - The main branch which will get merged later in the end <br>
 master - branch used for building code skeleton <br>
 styled = branch used for building code styling <br>
-kesava something something 
