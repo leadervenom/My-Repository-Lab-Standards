@@ -116,6 +116,21 @@ nav {
     border: 2px solid #58a6ff; 
 }
 
+.btn-links {
+    display: inline-block;
+    background-color: #238636; 
+    color: white; 
+    padding: 1.3rem 1.3rem; 
+    border-radius: 1.0rem; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin-top: 1.6rem;
+}
+
+.btn-links:hover {
+    background-color: #0ea02b;
+    border-color: #0d1117;
+}
 .foot {
     padding-top: 8rem;
     display: flex;
