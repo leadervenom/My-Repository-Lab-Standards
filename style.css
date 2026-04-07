@@ -9,7 +9,7 @@
 
 /* TASK 1: ARCHITECTURE & CUSTOM PROPERTIES */
 html {
-    font-size: 62.5%; /* 1rem = 10px [cite: 32, 63] */
+    font-size: 62.5%; /* 1rem = 10px  */
 }
 
 * {
@@ -49,12 +49,13 @@ body {
     line-height: 1.8;
     color: var(--color-text);
     background-color: var(--color-primary); 
+    padding: 3.0rem;
 }
 
 h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--color-accent); 
-    margin-bottom: var(--space-md); 
+    margin-top: var(--space-md); 
 }
 
 header {
@@ -115,6 +116,29 @@ nav {
     border: 2px solid #58a6ff; 
 }
 
+.btn-links {
+    display: inline-block;
+    background-color: #238636; 
+    color: white; 
+    padding: 1.3rem 1.3rem; 
+    border-radius: 1.0rem; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin-top: 1.6rem;
+}
+
+.btn-links:hover {
+    background-color: #0ea02b;
+    border-color: #0d1117;
+}
+.foot {
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 /* TASK 4: PAGE LAYOUT (GRID) */
 .layout-container {
     display: grid;
@@ -133,7 +157,41 @@ nav {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* [cite: 76] */
 }
 
-/* TASK 5: RESPONSIVE DESIGN [cite: 142] */
+/* Centers the table using the auto-margin trick */
+.t-style {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    /* Clean, modern look */
+    border-collapse: collapse; 
+    background-color: #0d1117;
+    color: #ffffff;
+    width: 80%;           /* Adjust this to make the table wider or narrower */
+    max-width: 900px;     /* Prevents it from getting too huge on big screens */
+}
+
+/* Styling the title (caption) */
+.t-style caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #58a6ff;       /* Matches your blue accent color */
+}
+
+/* Styling the cells */
+.t-style th, .t-style td {
+    border: 1px solid #30363d;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Making the header row stand out */
+.t-style thead th {
+    background-color: #161b22;
+}
+/* TASK 5: RESPONSIVE DESIGN  */
 @media (min-width: 1024px) {
     .layout-container {
         grid-template-columns: 1fr 300px; /* Sidebar layout [cite: 120, 151] */
