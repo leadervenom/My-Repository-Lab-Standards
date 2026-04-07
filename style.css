@@ -1,0 +1,157 @@
+/* ============================================
+   BREAKPOINTS [cite: 154-162]
+   mobile-first base: 320px and up (default)
+   tablet:  @media (min-width: 600px)
+   desktop: @media (min-width: 1024px)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* TASK 1: ARCHITECTURE & CUSTOM PROPERTIES */
+html {
+    font-size: 62.5%; /* 1rem = 10px [cite: 32, 63] */
+}
+
+* {
+    box-sizing: border-box; /* [cite: 32, 62] */
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* primary color */
+    --color-primary:    #0f172a; /* Deep Navy Background */
+    --color-secondary:  #1e293b; /* Lighter Navy Surface */
+
+    
+    --color-accent:     #38bdf8; /* Bright Blue (Buttons/Links) */
+    --color-accent-soft: #22c55e; /* Vibrant Green (Headers/Borders) */
+
+    /* texts */
+    --color-text:       #f8fafc; /* Near White Text */
+    --color-muted:      #94a3b8; /* Muted Grey */
+    --color-border:     #334155; /* Subtle Border Grey */
+
+    /* fonts */
+    --font-body:        'Times New Roman', Georgia, serif;
+    --font-heading:     'Playfair Display', serif;
+
+    
+    --space-sm:         0.8rem;
+    --space-md:         2rem;
+    --space-lg:         4rem;
+}
+
+/* TASK 2: TYPOGRAPHY & BOX MODEL */
+body {
+    font-family: var(--font-body);
+    font-size: 1.6rem; 
+    line-height: 1.8;
+    color: var(--color-text);
+    background-color: var(--color-primary); 
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-accent); 
+    margin-bottom: var(--space-md); 
+}
+
+header {
+    text-align: center;
+    padding: var(--space-lg) var(--space-md); 
+}
+
+
+figure img {
+    border-radius: 20px; /* Rounded corners from image  */
+    border: 3px solid var(--color-border);
+    max-width: 20%; /* [cite: 153] */
+    height: auto;
+}
+
+/* TASK 3: NAVIGATION & FLEXBOX */
+nav {
+    display: flex; 
+    justify-content: center; 
+    padding: var(--space-md);
+    position: sticky; 
+    top: 0;
+    background: rgba(15, 23, 42, 0.9); /* Translucent dark background */
+    backdrop-filter: blur(8px);       /* Nice modern blur effect */
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;        /* Prevents breaking on small screens */
+    gap: 15px;              /* Space between buttons */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #58a6ff;         /* Your light blue text */
+    font-weight: bold;
+    padding: 10px 20px;     /* Button sizing */
+    background-color: #0d1117; 
+    border: 1px solid #30363d; 
+    border-radius: 6px;      
+    transition: all 0.2s ease-in-out;
+    display: inline-block;  /* Ensures padding works correctly */
+}
+
+/* Hover effect */
+.nav-link:hover {
+    background-color: #161b22;
+    border-color: #8b949e;   /* Lighter border on hover */
+    color: #ffffff;          /* Brightens text on hover */
+}
+
+/* Active state for the page you are currently on */
+.nav-link.active {
+    border: 2px solid #58a6ff; 
+}
+
+/* TASK 4: PAGE LAYOUT (GRID) */
+.layout-container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-md);
+    grid-template-columns: 1fr; /* Mobile-first [cite: 147] */
+    gap: var(--space-lg);
+}
+
+.card {
+    background: var(--color-secondary);
+    padding: var(--space-md);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent-soft); /* Green bar from image [cite: 200] */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* [cite: 76] */
+}
+
+/* TASK 5: RESPONSIVE DESIGN [cite: 142] */
+@media (min-width: 1024px) {
+    .layout-container {
+        grid-template-columns: 1fr 300px; /* Sidebar layout [cite: 120, 151] */
+    }
+}
+
+/* TASK 6: VISUAL POLISH */
+blockquote {
+    position: relative;
+    padding-left: var(--space-lg);
+    font-style: italic;
+}
+
+blockquote::before {
+    content: "“"; /* [cite: 199, 209] */
+    font-size: 5rem;
+    color: var(--color-accent-soft);
+    position: absolute;
+    left: 0;
+    top: -1rem;
+}
