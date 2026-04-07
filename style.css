@@ -157,6 +157,40 @@ nav {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* [cite: 76] */
 }
 
+/* Centers the table using the auto-margin trick */
+.t-style {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    /* Clean, modern look */
+    border-collapse: collapse; 
+    background-color: #0d1117;
+    color: #ffffff;
+    width: 80%;           /* Adjust this to make the table wider or narrower */
+    max-width: 900px;     /* Prevents it from getting too huge on big screens */
+}
+
+/* Styling the title (caption) */
+.t-style caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #58a6ff;       /* Matches your blue accent color */
+}
+
+/* Styling the cells */
+.t-style th, .t-style td {
+    border: 1px solid #30363d;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Making the header row stand out */
+.t-style thead th {
+    background-color: #161b22;
+}
 /* TASK 5: RESPONSIVE DESIGN  */
 @media (min-width: 1024px) {
     .layout-container {
